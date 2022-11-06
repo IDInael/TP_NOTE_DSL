@@ -4,7 +4,7 @@
     <semanticResources>projet.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_GK1i0F4PEe2NJZNct_FxLw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HhMRwF4PEe2NJZNct_FxLw" name="projet metamodèle class diagram" repPath="#_HhInYF4PEe2NJZNct_FxLw" changeId="eee6537d-2a3c-49a7-911e-daea2edbe689">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HhMRwF4PEe2NJZNct_FxLw" name="projet metamodèle class diagram" repPath="#_HhInYF4PEe2NJZNct_FxLw" changeId="359ef849-3580-4c8d-adb9-8d56712e1162">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="projet.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -41,7 +41,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_H_A2M14PEe2NJZNct_FxLw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_H_APIV4PEe2NJZNct_FxLw" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H_APIl4PEe2NJZNct_FxLw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H_APIl4PEe2NJZNct_FxLw" x="270" y="5"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_H_A2NF4PEe2NJZNct_FxLw" type="2003" element="_H-t7QV4PEe2NJZNct_FxLw">
           <children xmi:type="notation:Node" xmi:id="_H_A2N14PEe2NJZNct_FxLw" type="5007"/>
@@ -130,7 +130,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_H_Egnl4PEe2NJZNct_FxLw" type="4001" element="_H-6vll4PEe2NJZNct_FxLw" source="_H_BdQF4PEe2NJZNct_FxLw" target="_H_CEUF4PEe2NJZNct_FxLw">
           <children xmi:type="notation:Node" xmi:id="_H_FHoF4PEe2NJZNct_FxLw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H_FHoV4PEe2NJZNct_FxLw" x="127" y="-9"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H_FHoV4PEe2NJZNct_FxLw" x="102" y="-9"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_H_FHol4PEe2NJZNct_FxLw" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H_FHo14PEe2NJZNct_FxLw" x="12" y="-10"/>
@@ -275,6 +275,9 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_H-tUMF4PEe2NJZNct_FxLw" name="Fonction" tooltipText="" width="12" height="10">
       <target xmi:type="ecore:EEnum" href="projet.ecore#//Fonction"/>
       <semanticElements xmi:type="ecore:EEnum" href="projet.ecore#//Fonction"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_H-tUMV4PEe2NJZNct_FxLw" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="221,236,202">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@style"/>
       </ownedStyle>

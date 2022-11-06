@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modèle" nsURI="http://m2sdl.modèle" nsPrefix="modèle">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EEnum" name="Fonction">
     <eLiterals name="Analyst"/>
     <eLiterals name="Designer" value="1"/>
@@ -10,6 +18,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Projet" eSuperTypes="#//Element">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="roleDansProjetUnique auMoinsDeuxRolesDifferents"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="roleDansProjetUnique" value="self.membres->forAll(p|p->isUnique(nom))"/>
+      <details key="auMoinsDeuxRolesDifferents" value="&#xA;&#x9;&#x9;&#x9;self.roles->forAll(r1,r2 : Role|r1.fonction&lt;>r2.fonction)->size()>=2"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="debut" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="membres" lowerBound="2"
@@ -19,6 +34,12 @@
         eType="#//Role" changeable="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Membre" eSuperTypes="#//Element">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="membreDifferentDeChef"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="membreDifferentDeChef" value="&#xA;&#x9;&#x9;&#x9;self.projets->forAll(p: Projet | p.chef.nom=self.nom)->isEmpty()"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="projets" upperBound="-1"
         eType="#//Projet"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="projetsGeres" upperBound="-1"
