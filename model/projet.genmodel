@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/TP_NOTE_DSL/src" modelPluginID="TP_NOTE_DSL" modelName="Projet"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>projet.ecore</foreignModel>
+  <genPackages prefix="Modele" disposableProviderFactory="true" ecorePackage="projet.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="projet.ecore#//Fonction">
+      <genEnumLiterals ecoreEnumLiteral="projet.ecore#//Fonction/Analyst"/>
+      <genEnumLiterals ecoreEnumLiteral="projet.ecore#//Fonction/Designer"/>
+      <genEnumLiterals ecoreEnumLiteral="projet.ecore#//Fonction/Programmeur"/>
+    </genEnums>
+    <genClasses ecoreClass="projet.ecore#//Entreprise">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projet.ecore#//Entreprise/projet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projet.ecore#//Entreprise/personnel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projet.ecore#//Entreprise/poste"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="projet.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projet.ecore#//Element/nom"/>
+    </genClasses>
+    <genClasses ecoreClass="projet.ecore#//Projet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projet.ecore#//Projet/debut"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projet.ecore#//Projet/fin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projet.ecore#//Projet/membres"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projet.ecore#//Projet/chef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projet.ecore#//Projet/roles"/>
+    </genClasses>
+    <genClasses ecoreClass="projet.ecore#//Membre">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projet.ecore#//Membre/projets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projet.ecore#//Membre/projetsGeres"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projet.ecore#//Membre/role"/>
+    </genClasses>
+    <genClasses ecoreClass="projet.ecore#//Role">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projet.ecore#//Role/fonction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projet.ecore#//Role/membre"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projet.ecore#//Role/projet"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
