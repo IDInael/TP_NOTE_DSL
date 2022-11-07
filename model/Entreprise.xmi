@@ -8,13 +8,17 @@
       debut="31/12/22"
       fin="02/01/22">
     <membres
-        nom="dinael2"
+        nom="2"
         projets="//@projet.0"/>
     <membres
-        nom="dinael"
+        nom="3"
         projets="//@projet.0"/>
-    <chef nom="chef"/>
-    <roles projet="//@projet.0"/>
-    <roles projet="//@projet.0"/>
+    <chef nom="chef"
+        projetsGeres="//@projet.0"/>
+    <roles fonction="Designer"
+        projet="//@projet.0"/>
+    <roles fonction="Designer"
+        projet="//@projet.0"/>
+    <roles fonction="Programmeur"/>
   </projet>
 </modèle:Entreprise>

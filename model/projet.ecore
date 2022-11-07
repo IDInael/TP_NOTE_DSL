@@ -31,7 +31,7 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="roleDansProjetUnique" value="&#xA;&#x9;&#x9;&#x9;self.membres->notEmpty() implies self.membres->isUnique(nom)"/>
-      <details key="auMoinsDeuxRolesDifferents" value="&#xA;&#x9;&#x9;&#x9;let f : Role = self.roles->first() in&#xA;&#x9;&#x9;&#x9;self.roles->notEmpty() implies self.roles->collect(r|r.fonction &lt;> f.fonction)->size()>=1"/>
+      <details key="auMoinsDeuxRolesDifferents" value="&#xA;&#x9;&#x9;&#x9;self.roles->notEmpty() implies&#xA;&#x9;&#x9;&#x9;let f = self.roles->first().fonction in&#xA;&#x9;&#x9;&#x9; self.roles->reject(r: Role|r.fonction = f)->size()>=1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="debut" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
