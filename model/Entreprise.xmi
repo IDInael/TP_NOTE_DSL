@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modèle:Entreprise
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:modèle="http://m2sdl.modèle"
+    nom="irit">
+  <projet nom="DSL"
+      debut="31/12/22"
+      fin="02/01/22">
+    <membres
+        nom="dinael2"
+        projets="//@projet.0"/>
+    <membres
+        nom="dinael"
+        projets="//@projet.0"/>
+    <chef nom="chef"/>
+    <roles projet="//@projet.0"/>
+    <roles projet="//@projet.0"/>
+  </projet>
+</modèle:Entreprise>
