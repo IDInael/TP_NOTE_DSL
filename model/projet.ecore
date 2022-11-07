@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modèle" nsURI="http://m2sdl.modèle" nsPrefix="modèle">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modele" nsURI="http://m2sdl.modele" nsPrefix="modele">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
@@ -31,7 +31,7 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="roleDansProjetUnique" value="&#xA;&#x9;&#x9;&#x9;self.membres->notEmpty() implies self.membres->isUnique(nom)"/>
-      <details key="auMoinsDeuxRolesDifferents" value="&#xA;&#x9;&#x9;&#x9;self.roles->notEmpty() implies&#xA;&#x9;&#x9;&#x9;let f = self.roles->first().fonction in&#xA;&#x9;&#x9;&#x9; self.roles->reject(r: Role|r.fonction = f)->size()>=1"/>
+      <details key="auMoinsDeuxRolesDifferents" value="&#xA;&#x9;&#x9;&#x9;&#x9;self.roles->notEmpty() implies&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let f :Fonction = self.roles->first().fonction in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9; self.roles->reject(r|r.fonction = f)->size()>=1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="debut" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

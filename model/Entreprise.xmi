@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<modèle:Entreprise
+<modele:Entreprise
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:modèle="http://m2sdl.modèle"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:modele="http://m2sdl.modele"
+    xsi:schemaLocation="http://m2sdl.modele projet.ecore"
     nom="irit">
   <projet nom="DSL"
-      debut="31/12/22"
-      fin="02/01/22">
+      debut="10/01/21"
+      fin="10/01/22">
     <membres
-        nom="2"
+        nom="dinael"
         projets="//@projet.0"/>
     <membres
-        nom="3"
+        nom="azfar"
         projets="//@projet.0"/>
     <chef nom="chef"
         projetsGeres="//@projet.0"/>
-    <roles fonction="Designer"
+    <roles membre="//@projet.0/@membres.0"
         projet="//@projet.0"/>
-    <roles fonction="Designer"
+    <roles fonction="Programmeur"
+        membre="//@projet.0/@membres.1"
         projet="//@projet.0"/>
-    <roles fonction="Programmeur"/>
   </projet>
-</modèle:Entreprise>
+</modele:Entreprise>
